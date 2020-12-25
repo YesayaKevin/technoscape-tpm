@@ -14,9 +14,9 @@
     />
     <title>Register</title>
   </head>
-  <body class="bg-black text-gray-100">
+  <body class="bg-black sticky text-gray-100">
     <div class="p-4">
-      <nav class="bg-none fixed top-0 w-screen">
+      <nav class="bg-none top-0 w-screen>
         <div class="container mx-auto">
           <div class="sm:flex justify-between mx-10">
             <!-- Left Side -->
@@ -66,7 +66,7 @@
     </div>
     <section
       id="register-section"
-      class="h-screen flex flex-col justify-center mx-auto"
+      class="h-screen flex flex-col justify-center mx-auto mt-6"
     >
       <div
         class="register border-2 border-purple-700 w-1/3 mx-8 flex flex-col justify-center mx-auto p-6 my-auto h-auto"
@@ -108,16 +108,23 @@
                   type="password"
                   name="password"
                   placeholder="Password"
+                  id="password"
                   class="bg-transparent rounded-md px-1 text-white border-2 border-gray-300 w-full h-10 mb-2"
+                  oninput="validatePassword()"
                   required
                 />
+                <p id="alert-password" class="text-red-400"></p>
                 <input
                   type="password"
                   name="confirm-password"
                   placeholder="Confirmation Password"
                   class="bg-transparent rounded-md px-1 text-white border-2 border-gray-300 w-full h-10 mb-2"
+                  id="confirm-password"
+                  oninput="confirmPassword()"
                   required
                 />
+                <p id="wrong-pass" class="text-red-400"></p>
+                <p id="confirm-pass" class="text-green-300"></p>
                 <input
                   type="radio"
                   id="binusian"
@@ -127,7 +134,7 @@
                   onclick="myFunction()"
                   class="mt-1.5 mr-1.5"
                 />
-                <label for="binusian">Binusian</label>
+                <label for="binusian" class="text-gray-400">Binusian</label>
                 <input
                   type="radio"
                   id="non-binusian"
@@ -137,7 +144,9 @@
                   onclick="myFunction()"
                   class="mt-1.5 mr-1.5 ml-10"
                 />
-                <label for="non-binusian">Non Binusian</label>
+                <label for="non-binusian" class="text-gray-400"
+                  >Non Binusian</label
+                >
                 <div class="flex justify-center">
                   <button
                     class="w-1/2 h-9 bg-blue-700 text-white rounded-md px-1 font-bold"
@@ -164,12 +173,15 @@
                   required
                 />
                 <input
-                  type="number"
+                  type="text"
                   name="whatsapp"
                   placeholder="Whatsapp Number"
                   class="bg-transparent rounded-md px-1 text-white border-2 border-gray-300 w-full h-10 mb-2"
+                  id="whatsapp"
+                  oninput="validateNum()"
                   required
                 />
+                <p id="alert-password" class="text-red-400"></p>
                 <input
                   type="text"
                   name="lineID"
@@ -191,14 +203,17 @@
                   class="bg-transparent rounded-md px-1 text-white border-2 border-gray-300 w-full h-10 mb-2"
                   required
                 />
+                <p class="text-gray-400 text-xs flex justify-end">Click Here↓↓↓</p>
                 <input
                   type="date"
                   name="dob"
                   placeholder="Birth Date"
-                  class="bg-transparent rounded-md px-1 text-white border-2 border-gray-300 w-full h-10 mb-2"
+                  class="text-gray-400 bg-transparent rounded-md px-1 text-white border-2 border-gray-300 w-full h-10 mb-2"
                   required
                 />
-                <div class="border-2 border-gray-300 w-46 mb-2 rounded-md px-1">
+                <div
+                  class="border-2 border-gray-300 w-46 mb-2 rounded-md px-1 text-gray-400"
+                >
                   <div id="choose">Upload ID Card</div>
                   <input
                     type="file"
@@ -208,7 +223,9 @@
                     class="idCard flex justify-center mb-2"
                   />
                 </div>
-                <div class="border-2 border-gray-300 w-46 rounded-md px-1">
+                <div
+                  class="border-2 border-gray-300 w-46 rounded-md px-1 text-gray-400"
+                >
                   <label for="idcard" id="cv" class="flex">Upload CV</label>
                   <input
                     type="file"
@@ -262,48 +279,72 @@
         }
       }
 
-      function validateForm() {
-        var x = document.forms["form-register"]["team_name"].value;
-        if (x.length < 8) {
-          team_name.classList.remove("invalid");
-          team_name.classList.add("valid");
-        } else {
-          password.classList.remove("valid");
-          password.classList.add("invalid");
+      function validatePassword()
+      {
+        var x = document.getElementById("password").value;
+        var lowerCaseLetters = /[a-z]/g;
+        if (!x.match(lowerCaseLetters)) {
+          document.getElementById("alert-password").innerHTML = "Password must contain lower case letters";
         }
-        var y = document.forms["form-register"]["password"].value;
-        var lowerCase = /[a-z]/g;
-        if (y.value.match(lowerCase)) {
-          password.classList.remove("invalid");
-          password.classList.add("valid");
-        } else {
-          password.classList.remove("valid");
-          password.classList.add("invalid");
-        }
-        var upperCase = /[A-Z]/g;
-        if (y.value.match(upperCase)) {
-          password.classList.remove("invalid");
-          password.classList.add("valid");
-        } else {
-          password.classList.remove("valid");
-          password.classList.add("invalid");
+        var upperCaseLetters = /[A-Z]/g;
+        if (!x.match(upperCaseLetters)) {
+          document.getElementById("alert-password").innerHTML = "Password must contain upper case letters";
         }
         var numbers = /[0-9]/g;
-        if (y.value.match(numbers)) {
-          password.classList.remove("invalid");
-          password.classList.add("valid");
-        } else {
-          password.classList.remove("valid");
-          password.classList.add("invalid");
+        if (!x.match(numbers)) {
+          document.getElementById("alert-password").innerHTML = "Password must contain numbers";
         }
-
-        var z = document.forms["form-register"]["confirm-password"].value;
-        if (z === y) {
-          confirm - password.classList.remove("invalid");
-          confirm - password.classList.add("valid");
-        } else {
-          password.classList.remove("valid");
-          password.classList.add("invalid");
+        if (!x.length >= 8) {
+          document.getElementById("alert-password").innerHTML = "Password must be at least 8 characters";
+        }
+        if (x.match(lowerCaseLetters)) {
+          document.getElementById("alert-password").innerHTML = "";
+        }
+        if (x.match(upperCaseLetters)) {
+          document.getElementById("alert-password").innerHTML = "";
+        }
+        if (x.match(numbers)) {
+          document.getElementById("alert-password").innerHTML = "";
+        }
+        if (x.length >= 8) {
+          document.getElementById("alert-password").innerHTML = "";
+        }
+      }
+      function validateNum()
+      {
+        var x = document.getElementById("whatsapp").value;
+        var lowerCaseLetters = /[a-z]/g;
+        if (x.match(lowerCaseLetters)) {
+          document.getElementById("alert-whatsapp").innerHTML = "Whatsapp number can only contain numbers";
+        }
+        var upperCaseLetters = /[A-Z]/g;
+        if (x.match(upperCaseLetters)) {
+          document.getElementById("alert-whatsapp").innerHTML = "Whatsapp number can only contain numbers";
+        }
+        if (x.length >= 9) {
+          document.getElementById("alert-whatsapp").innerHTML = "Whatsapp number must be at least 9 numbers";
+        }
+        if (!x.match(lowerCaseLetters)) {
+          document.getElementById("alert-whatsapp").innerHTML = "";
+        }
+        if (!x.match(upperCaseLetters)) {
+          document.getElementById("alert-password").innerHTML = "";
+        }
+        if (!x.length >= 9) {
+          document.getElementById("alert-whatsapp").innerHTML = "";
+        }
+      }
+      function confirmPassword()
+      {
+        var x = document.getElementById("password");
+        var y = document.getElementById("confirm-password");
+        if(x.value != y.value) 
+        {
+          document.getElementById("wrong-pass").innerHTML = "Passwords do not match";
+        }
+        else{
+          document.getElementById("confirm-pass").innerHTML = "Password Confirmed";
+          document.getElementById("wrong-pass").style.display = "none";
         }
       }
     </script>
