@@ -78,15 +78,16 @@
           <!-- buttons buat switch -->
           <div class="flex justify-center">
             <button
-              class="border text-xs w-24 h-7 rounded-full"
-              style="background-color: purple"
+              class="border border-blue-500 text-xs w-24 h-7 rounded-full"
+              style="background-color: #3B71D9;
+              "
               id="team-btn"
               onclick="showTab()"
             >
               Team
             </button>
             <button
-              class="border text-xs w-24 h-7 rounded-full"
+              class="border border-blue-500 text-xs w-24 h-7 rounded-full"
               id="lead-btn"
               onclick="showTab()"
             >
@@ -266,14 +267,14 @@
         if (document.getElementById("team").style.display === "block") {
           document.getElementById("team").style.display = "none";
           document.getElementById("leader").style.display = "block";
-          document.getElementById("lead-btn").style.backgroundColor = "purple";
+          document.getElementById("lead-btn").style.backgroundColor = "#3B71D9";
           document.getElementById("team-btn").style.backgroundColor = "black";
           document.getElementByClassName("register").style.width = "30em";
           document.getElementById("next-btn").innerHTML = "Submit";
         } else {
           document.getElementById("leader").style.display = "none";
           document.getElementById("team").style.display = "block";
-          document.getElementById("team-btn").style.backgroundColor = "purple";
+          document.getElementById("team-btn").style.backgroundColor = "#3B71D9";
           document.getElementById("lead-btn").style.backgroundColor = "black";
           document.getElementById("next-btn").innerHTML = "Next";
         }
