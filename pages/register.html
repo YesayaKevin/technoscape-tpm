@@ -10,30 +10,145 @@
     <title>Register</title>
 </head>
 <body class="text-gray-100">
-    <nav class="bg-none fixed top-0 w-screen">
-        <div class="container mx-auto">
+    <!-- mob -->
+    <div class="block sm:hidden">
+        <nav class="web:bg-none fixed top-0 w-screen">
+          <div class="container mx-auto">
             <div class="sm:flex justify-between mx-10">
-                <!-- Left Side -->
-                <a href="#" class="p-3"><img src="../photos/ehackathon_logo_1.png" alt="logo-brand.jpg" height="   75px" width="75px"/></a>
-                <!-- Right Side -->
-                <ul class="text-white sm:self-center text-xl sm:border-none">
-                    <li class="sm:inline-block"><a href="#home-section" class="p-3 hover:text-indigo-600">Home</a></li>
-                    <li class="sm:inline-block"><a href="#champion-section" class="p-3 hover:text-indigo-600">Champion</a></li>
-                    <li class="sm:inline-block"><a href="#aboutus-section" class="p-3 hover:text-indigo-600">About Us</a></li>
-                    <li class="sm:inline-block"><a href="#faq-section" class="p-3 hover:text-indigo-600">FaQ</a></li>
-                    <li class="sm:inline-block"><a href="#timeline-section" class="p-3 hover:text-indigo-600">Timeline</a></li>
-                    <li class="sm:inline-block"><a href="../pages/login.html" class="my-2 px-3 py-1 hover:text-indigo-600 rounded-md border-2 border-gradient">Login</a></li>
-                </ul>
+              <!-- Left Side -->
+              <a href="#" class="p-3"
+                ><img
+                  src="../photos/ehackathon_logo_1.png"
+                  alt="logo-brand.jpg"
+                  height="75px"
+                  width="75px"
+              /></a>
+              <!-- Right Side -->
+              <button
+                type="button"
+                class="inline-flex justify-end w-full rounded-md py-2 w-1/4"
+                id="options-menu"
+                aria-haspopup="true"
+                aria-expanded="true"
+                onclick="show()"
+              >
+                <svg
+                  viewBox="0 0 448 512"
+                  width="20"
+                  title="align-right"
+                  fill="gray"
+                >
+                  <path
+                    d="M16 224h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16zm416 192H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm3.17-384H172.83A12.82 12.82 0 0 0 160 44.83v38.34A12.82 12.82 0 0 0 172.83 96h262.34A12.82 12.82 0 0 0 448 83.17V44.83A12.82 12.82 0 0 0 435.17 32zm0 256H172.83A12.82 12.82 0 0 0 160 300.83v38.34A12.82 12.82 0 0 0 172.83 352h262.34A12.82 12.82 0 0 0 448 339.17v-38.34A12.82 12.82 0 0 0 435.17 288z"
+                  />
+                </svg>
+              </button>
+              <ul
+                class="text-white sm:self-center text-sm sm:border-none bg-black bg-opacity-50"
+                id="dropdown"
+                style="display: none"
+              >
+                <li class="sm:inline-block">
+                  <a
+                    href="#home-section"
+                    class="p-3 hover:text-indigo-600 flex justify-end"
+                    >Home</a
+                  >
+                </li>
+                <li class="sm:inline-block">
+                  <a
+                    href="#champion-section"
+                    class="p-3 hover:text-indigo-600 flex justify-end"
+                    >Champion</a
+                  >
+                </li>
+                <li class="sm:inline-block">
+                  <a
+                    href="#aboutus-section"
+                    class="p-3 hover:text-indigo-600 flex justify-end"
+                    >About Us</a
+                  >
+                </li>
+                <li class="sm:inline-block">
+                  <a
+                    href="#faq-section"
+                    class="p-3 hover:text-indigo-600 flex justify-end"
+                    >FaQ</a
+                  >
+                </li>
+                <li class="sm:inline-block">
+                  <a
+                    href="#timeline-section"
+                    class="p-3 hover:text-indigo-600 flex justify-end"
+                    >Timeline</a
+                  >
+                </li>
+                <li class="sm:inline-block">
+                  <a
+                    href="../pages/login.html"
+                    class="my-2 px-3 py-1 hover:text-indigo-600 rounded-md border-2 border-gradient flex justify-end"
+                    >Login</a
+                  >
+                </li>
+              </ul>
             </div>
+          </div>
+        </nav>
+      </div>
+      <!-- web -->
+      <nav class="hidden sm:block web:bg-none fixed top-0 w-screen">
+        <div class="container mx-auto">
+          <div class="sm:flex justify-between mx-10">
+            <!-- Left Side -->
+            <a href="#" class="p-3"
+              ><img
+                src="../photos/ehackathon_logo_1.png"
+                alt="logo-brand.jpg"
+                height="   75px"
+                width="75px"
+            /></a>
+            <!-- Right Side -->
+            <ul class="text-white sm:self-center text-xl sm:border-none">
+              <li class="sm:inline-block">
+                <a href="#home-section" class="p-3 hover:text-indigo-600">Home</a>
+              </li>
+              <li class="sm:inline-block">
+                <a href="#champion-section" class="p-3 hover:text-indigo-600"
+                  >Champion</a
+                >
+              </li>
+              <li class="sm:inline-block">
+                <a href="#aboutus-section" class="p-3 hover:text-indigo-600"
+                  >About Us</a
+                >
+              </li>
+              <li class="sm:inline-block">
+                <a href="#faq-section" class="p-3 hover:text-indigo-600">FaQ</a>
+              </li>
+              <li class="sm:inline-block">
+                <a href="#timeline-section" class="p-3 hover:text-indigo-600"
+                  >Timeline</a
+                >
+              </li>
+              <li class="sm:inline-block">
+                <a
+                  href="../pages/login.html"
+                  class="my-2 px-3 py-1 hover:text-indigo-600 rounded-md border-2 border-gradient"
+                  >Login</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-    </nav>
+      </nav>
     <section id="register-section" class="min-h-screen bg-regis top-0 flex flex-col justify-center items-center mx-auto">
         <div class="register border-2 border-gradient w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/3 2xl:w-1/4 mx-8 flex flex-col justify-center mx-auto p-6 my-32 h-auto">
             <div class="space-y-4" id="register-form"> <!-- Mx auto-->
                 <h1 class="text-xl text-center text-white m-0">REGISTER</h1>
                 <!-- buttons buat switch -->
                 <div class="flex justify-center">
-                    <button class="border-1 border-white text-white text-xs w-24 h-7 rounded-full" style="background-color: purple" id="team-btn" onclick="showTab()">Team</button>
+                    <button class="border-1 border-white text-white text-xs w-24 h-7 rounded-full" style="background-color:#3B71D9;
+                    blue" id="team-btn" onclick="showTab()">Team</button>
                     <button class="border-1 border-white text-white text-xs w-24 h-7 rounded-full" id="lead-btn" onclick="showTab()">Leader</button>
                 </div>
                 <!-- button buat switch -->
@@ -97,15 +212,15 @@
             if (document.getElementById("team").style.display === "block") {
                 document.getElementById("team").style.display = "none";
                 document.getElementById("leader").style.display = "block";
-                document.getElementById("lead-btn").style.backgroundColor = "purple";
-                document.getElementById("team-btn").style.backgroundColor = "black";
+                document.getElementById("lead-btn").style.backgroundColor = "#3B71D9";
+                document.getElementById("team-btn").style.backgroundColor = "transparent";
                 document.getElementByClassName("register").style.width = "30em";
                 document.getElementById("next-btn").innerHTML = "Submit";
             } else {
                 document.getElementById("leader").style.display = "none";
                 document.getElementById("team").style.display = "block";
-                document.getElementById("team-btn").style.backgroundColor = "purple";
-                document.getElementById("lead-btn").style.backgroundColor = "black";
+                document.getElementById("team-btn").style.backgroundColor = "#3B71D9";
+                document.getElementById("lead-btn").style.backgroundColor = "transparent";
                 document.getElementById("next-btn").innerHTML = "Next";
             }
         }
@@ -153,5 +268,9 @@
             }
         }
     </script>
+        <script
+        src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+        defer
+        ></script>
 </body>
 </html>
