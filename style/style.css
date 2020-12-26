@@ -5,7 +5,7 @@ html  {
 body {
     margin: 0%;
     padding: 0%;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .bg-nav{
@@ -18,8 +18,29 @@ body {
 }
 
 .bg-regis{
-    background-image: url("../photos/regispage.png");
+    background-image: url("../photos/registerpage.png");
     background-size: cover;
+}
+
+.bg-home{
+    background-image: url("../photos/homepage.png");
+    background-size: cover;
+}
+
+.bg-about{
+    background-image: url("../photos/aboutpage.png");
+}
+
+.bg-champ{
+    background-image: url("../photos/championpage.png");
+}
+
+.bg-orange{
+    background-color: #E0473F;
+}
+
+.bg-ocean{
+    background-color: #40A4FF;
 }
 
 .border-gradient{
