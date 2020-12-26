@@ -33,3 +33,8 @@ body {
     background-size: cover;
 }
 
+/* carousel */
+.slick-prev, .slick-arrow
+{
+    
+}
