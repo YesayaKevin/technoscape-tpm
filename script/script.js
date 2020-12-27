@@ -6,6 +6,9 @@ $('.multiple-items').slick({
     slidesToScroll: 1,
     dots: false,
     arrows: false,
+    autoplay: true,
+    autoplayspeed: 1500,
+    cssEase: "ease-in-out",
   });
   
   $('.multiple-items2').slick({
@@ -14,4 +17,7 @@ $('.multiple-items').slick({
     slidesToScroll: 1,
     dots: false,
     arrows: false,
+    autoplay: true,
+    autoplayspeed: 1500,
+    cssEase: "ease-in-out",
   });
