@@ -153,4 +153,15 @@ $('.multiple-items3').slick({
     autoplay: true,
     autoplayspeed: 300,
     cssEase: "ease-in-out",
-    });
+    }
+);
+
+function show() {
+    if (document.getElementById("dropdown").style.display === "none") {
+        document.getElementById("dropdown").style.display = "block";
+    } else if (
+        document.getElementById("dropdown").style.display === "block"
+    ) {
+        document.getElementById("dropdown").style.display = "none";
+    }
+}

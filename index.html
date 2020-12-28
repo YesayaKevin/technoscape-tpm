@@ -12,21 +12,41 @@
     <title>Technoscape - Join Us Now</title>
 </head>
 <body>
-    <nav class="bg-gradient-to-b hidden from-black bg-opacity-50 fixed top-0 w-screen">
+    <!-- Nav for web -->
+    <nav class="hidden lg:flex bg-gradient-to-b from-black bg-opacity-50 fixed top-0 w-screen">
         <div class="container mx-auto">
             <div class="sm:flex justify-between mx-10">
                 <!-- Left Side -->
-                <a href="#" class="p-3"><img src="../technoscape-tpm/photos/ehackathon_logo_1.png" alt="logo-brand.jpg" height="75px" width="75px"></a>
+                <a href="#" class="p-3"><img src="../technoscape-tpm/photos/ehackathon_logo_1.png" alt="logo-brand.jpg" height="   75px" width="75px"></a>
                 <!-- Right Side -->
                 <ul class="text-white sm:self-center text-xl sm:border-none">
-                    <li class="sm:inline-block"><a href="#home-section" class="p-3 hover:text-red-400">Home</a></li>
-                    <li class="sm:inline-block"><a href="#champion-section" class="p-3 hover:text-red-400">Champion</a></li>
-                    <li class="sm:inline-block"><a href="#aboutus-section"  class="p-3 hover:text-red-400">About Us</a></li>
-                    <li class="sm:inline-block"><a href="#faq-section" class="p-3 hover:text-red-400">FaQ</a></li>
-                    <li class="sm:inline-block"><a href="#timeline-section" class="p-3 hover:text-red-400">Timeline</a></li>
-                    <li class="sm:inline-block"><a href="../technoscape-tpm/pages/login.html" class="my-2 px-3 py-1 hover:text-red-400 rounded-md border-2 border-gradient">Login</a></li>
+                    <li class="sm:inline-block"><a href="../technoscape-tpm/index.html#home-section" class="p-3 hover:text-red-500">Home</a></li>
+                    <li class="sm:inline-block"><a href="../technoscape-tpm/index.html#champion-section" class="p-3 hover:text-red-500">Champion</a></li>
+                    <li class="sm:inline-block"><a href="../technoscape-tpm/index.html#aboutus-section" class="p-3 hover:text-red-500">About Us</a></li>
+                    <li class="sm:inline-block"><a href="../technoscape-tpm/index.html#faq-section" class="p-3 hover:text-red-500">FaQ</a></li>
+                    <li class="sm:inline-block"><a href="../technoscape-tpm/index.html#timeline-section" class="p-3 hover:text-red-500">Timeline</a></li>
+                    <li class="sm:inline-block"><a href="../technoscape-tpm/pages/login.html" class="my-2 px-3 py-1 hover:text-red-500 rounded-md border-2 border-gradient">Login</a></li>
                 </ul>
             </div>
+        </div>
+    </nav>
+    <!-- nav for mob -->
+    <nav class="flex lg:hidden bg-gradient-to-b from-black bg-opacity-50 fixed top-0 w-screen">
+        <div class="container mx-auto">
+            <div class="flex justify-between mx-10">
+                <!-- Left Side -->
+                <a href="#" class="p-3"><img src="../technoscape-tpm/photos/ehackathon_logo_1.png" alt="logo-brand.jpg" height="75px" width="75px"></a>
+                <!-- Right Side -->
+                <button type="button" class="m-0" id="options-menu" aria-haspopup="true" aria-expanded="true" onclick="show()"><svg viewBox="0 0 448 512" width="20" title="align-right" fill="gray" ><path d="M16 224h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16zm416 192H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm3.17-384H172.83A12.82 12.82 0 0 0 160 44.83v38.34A12.82 12.82 0 0 0 172.83 96h262.34A12.82 12.82 0 0 0 448 83.17V44.83A12.82 12.82 0 0 0 435.17 32zm0 256H172.83A12.82 12.82 0 0 0 160 300.83v38.34A12.82 12.82 0 0 0 172.83 352h262.34A12.82 12.82 0 0 0 448 339.17v-38.34A12.82 12.82 0 0 0 435.17 288z" /></svg></button>
+            </div>
+            <ul class="text-white self-center text-xl sm:border-none bg-black bg-opacity-90 flex flex-col" id="dropdown" style="display: none">
+                <li class="inline-block w-full flex justify-center"><a href="../technoscape-tpm/index.html#home-section" class="text-center p-3 hover:text-red-500">Home</a></li>
+                <li class="inline-block w-full flex justify-center"><a href="../technoscape-tpm/index.html#champion-section" class="text-center p-3 hover:text-red-500">Champion</a></li>
+                <li class="inline-block w-full flex justify-center"><a href="../technoscape-tpm/index.html#aboutus-section" class="text-center p-3 hover:text-red-500">About Us</a></li>
+                <li class="inline-block w-full flex justify-center"><a href="../technoscape-tpm/index.html#faq-section" class="text-center p-3 hover:text-red-500">FaQ</a></li>
+                <li class="inline-block w-full flex justify-center"><a href="../technoscape-tpm/index.html#timeline-section" class="text-center p-3 hover:text-red-500">Timeline</a></li>
+                <li class="inline-block w-full flex justify-center"><a href="../technoscape-tpm/pages/login.html" class="my-2 px-3 py-1 hover:text-red-500 bg-black bg-opacity-50 rounded-md border-2 border-gradient">Login</a></li>
+            </ul>
         </div>
     </nav>
     <!-- Home -->

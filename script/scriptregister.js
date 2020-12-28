@@ -60,6 +60,7 @@ function validateForm() {
         password.classList.remove("valid");
         password.classList.add("invalid");
     }
+
     var z = document.forms["form-register"]["confirm-password"].value;
     if (z === y) {
         confirm - password.classList.remove("invalid");
@@ -69,3 +70,25 @@ function validateForm() {
         password.classList.add("invalid");
     }
 }
+
+function show() {
+    if (document.getElementById("dropdown").style.display === "none") {
+        document.getElementById("dropdown").style.display = "block";
+    } else if (
+        document.getElementById("dropdown").style.display === "block"
+    ) {
+        document.getElementById("dropdown").style.display = "none";
+    }
+}
+
+const forms = document.getElementById('register-forms');
+    forms.addEventListener('submit', function(e){
+        const mobile = forms.wa_num.value;
+        // console.log(mobile.match(new RegExp("/\+?([ -]?\d+)+|\(\d+\)([ -]\d+)/g")))
+        if(!(/\+?([ -]?\d+)+|\(\d+\)([ -]\d+)/.test(mobile))){
+            alert("Invalid Phone Numbers");
+            return false;
+        }
+        return true;
+    }
+)
