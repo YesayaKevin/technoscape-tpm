@@ -69,6 +69,10 @@ body {
     background-color: #40A4FF;
 }
 
+.bg-dust{
+    background: #65789D;
+}
+
 .font-yellow{
     color: #fee0a0;
 }
@@ -91,4 +95,8 @@ body {
     } 100%{
         border-color: #40A4FF;
     }
+}
+
+.bg-purples{
+    background: #574292;
 }
