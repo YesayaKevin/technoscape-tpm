@@ -83,6 +83,10 @@ body {
     animation-iteration-count: infinite;
 }
 
+.font-dust{
+    color: #282828;
+}
+
 @keyframes border-colorful{
     0%{
         border-color: #40A4FF;

@@ -29,9 +29,9 @@
                         <h1 class="text-white font-semibold text-xl text-center tracking-widest">NAME</h1>
                         <hr class="my-4 w-full">
                         <div class="flex w-full justify-around">
-                            <button class="transform hover:scale-110 motion-reduce:transform-none"><a href=""><img class="w-12 sm:w-14 md:w-16 lg:w-18 xl:w-20" src="../photos/svgs/view-dashboardA2.svg" alt="edit.svg"></a></button>
-                            <button class="transform hover:scale-110 motion-reduce:transform-none"><a href=""><img class="w-12 sm:w-14 md:w-16 lg:w-18 xl:w-20" src="../photos/svgs/edit-dashboardA.svg" alt="edit.svg"></a></button>
-                            <button class="transform hover:scale-110 motion-reduce:transform-none"><a href=""><img class="w-12 sm:w-14 md:w-16 lg:w-18 xl:w-20" src="../photos/svgs/delete-dashboardA.svg" alt="edit.svg"></a></button>
+                            <button class="transform hover:scale-110 motion-reduce:transform-none"><a href="../pages/view-data.html"><img class="w-12 sm:w-14 md:w-16 lg:w-18 xl:w-20" src="../photos/svgs/view-dashboardA2.svg" alt="edit.svg"></a></button>
+                            <button class="transform hover:scale-110 motion-reduce:transform-none"><a href="../pages/edit-data.html"><img class="w-12 sm:w-14 md:w-16 lg:w-18 xl:w-20" src="../photos/svgs/edit-dashboardA.svg" alt="edit.svg"></a></button>
+                            <button data-target="statusPopUpContent" id="statusPopUpToggle" class="transform hover:scale-110 motion-reduce:transform-none"><img class="w-12 sm:w-14 md:w-16 lg:w-18 xl:w-20" src="../photos/svgs/delete-dashboardA.svg" alt="edit.svg"></button>
                         </div>
                     </div>
                 </div>
@@ -39,6 +39,22 @@
         </div>
     </div>
 </section>
-
+<!-- PopUp Payment Status -->
+<section class="flex items-center hidden content-center bg-black fixed top-0 h-screen bg-opacity-50 w-full" id="popUpPaymentStatus">
+    <div id="statusPopUpContent" class="popUp-Status w-80 flex flex-col sm:w-96 hidden fixed top-4 transform -translate-x-1/2 z-50 py-4 bg-dust rounded-xl left-1/2" id="examplePopUpContent">
+        <div class="flex justify-center px-4 pb-4">
+            <h1 class="text-white text-center font-semibold tracking-widest justify-self-center text-xl">Delete Participant</h1>
+        </div>
+        <hr class="w-2/3 mx-auto">
+        <div class="flex items-center px-4 py-4 justify-center">
+            <p class="text-center font-semibold text-white text-sm">Delete Participant?</p>
+        </div> 
+        <div class="flex justify-center px-4 pt-4 space-x-2">
+            <button id="closeStatus" class="transform hover:scale-110 motion-reduce:transform-none rounded-xl font-semibold bg-ocean text-white text-sm p-2">Cancel</button>
+            <form><button type="submit" data-target="paymentStatus" id="closeStatus1" class="transform hover:scale-110 motion-reduce:transform-none rounded-xl font-semibold bg-purples text-white text-sm p-2">Delete</button></form>
+        </div>
+    </div>
+</section>
+<script src="../script/scriptParticipant.js"></script>
 </body>
 </html>
