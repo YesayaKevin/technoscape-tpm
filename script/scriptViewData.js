@@ -35,3 +35,19 @@ function closePopUp2(){
     }
     popUpBackground2.classList.toggle("hidden", true)
 }
+
+function openPopUpCV() {
+    document.getElementById("openPopUpCV").style.display = "block";
+}
+
+function closePopCV() {
+    document.getElementById("openPopUpCV").style.display = "none";
+}
+
+function openPopUpID() {
+    document.getElementById("openPopUpID").style.display = "block";
+}
+
+function closePopID() {
+    document.getElementById("openPopUpID").style.display = "none";
+}

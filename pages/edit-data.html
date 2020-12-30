@@ -58,7 +58,7 @@
                     <label class="ml-2 mt-2 font-dust text-sm font-semibold">Upload CV</label>
                     <div class="w-full flex flex-row">
                         <input class="w-4/5 text-white text-base font-light ml-2 rounded-lg border-white flex justify-between bg-transparent border-2 h-8"></input>
-                        <button data-target="examplePopUpContent1" id="examplePopUpToggle1" class="ml-4 transform hover:scale-110 motion-reduce:transform-none focus:outline-none mr-2 h-full"><img class="m-0 h-8" src="../photos/svgs/view-toggle.svg" alt=""></button>
+                        <button data-target="examplePopUpContent1" id="examplePopUpToggle1" class="ml-4 transform hover:scale-110 motion-reduce:transform-none focus:outline-none mr-2 h-full" onclick="openPopUpCV()"><img class="m-0 h-8" src="../photos/svgs/view-toggle.svg" alt=""></button>
                     </div>
                     
                 </div>
@@ -66,13 +66,13 @@
                     <label class="ml-2 mt-2 font-dust text-sm font-semibold">Upload ID Card</label>
                     <div class="w-full flex flex-row">
                         <input class="w-4/5 text-white text-base font-light ml-2 rounded-lg border-white flex justify-between bg-transparent border-2 h-8"></input>
-                        <button data-target="examplePopUpContent2" id="examplePopUpToggle2" class="ml-4 transform hover:scale-110 motion-reduce:transform-none focus:outline-none mr-2 h-full"><img class="m-0 h-8" src="../photos/svgs/view-toggle.svg" alt=""></button>
+                        <button data-target="examplePopUpContent2" id="examplePopUpToggle2" class="ml-4 transform hover:scale-110 motion-reduce:transform-none focus:outline-none mr-2 h-full" onclick="openPopUpID()"><img class="m-0 h-8" src="../photos/svgs/view-toggle.svg" alt=""></button>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Container Member -->
-        <div class="flex hidden flex-col mb-16 rounded-xl w-full w-full md:w-3/5 lg:w-1/2 bg-dust px-8 lg:px-16 2xl:px-32 py-12">
+        <div class="flex flex-col mb-16 rounded-xl w-full w-full md:w-3/5 lg:w-1/2 bg-dust px-8 lg:px-16 2xl:px-32 py-12">
             <h1 class="text-white text-center font-semibold text-3xl">Edit Data - Member</h1>
             <hr class="w-full h-4 mt-6">
             <div class="flex flex-col mt-8">
@@ -108,7 +108,7 @@
                     <label class="ml-2 mt-2 font-dust text-sm font-semibold">Upload CV</label>
                     <div class="w-full flex flex-row">
                         <input class="w-4/5 text-white text-base font-light ml-2 rounded-lg border-white flex justify-between bg-transparent border-2 h-8"></input>
-                        <button data-target="examplePopUpContent1" id="examplePopUpToggle1" class="ml-4 transform hover:scale-110 motion-reduce:transform-none focus:outline-none mr-2 h-full"><img class="m-0 h-8" src="../photos/svgs/view-toggle.svg" alt=""></button>
+                        <button data-target="examplePopUpContent1" id="examplePopUpToggle1"  onclick="openPopUpCV()" class="ml-4 transform hover:scale-110 motion-reduce:transform-none focus:outline-none mr-2 h-full"><img class="m-0 h-8" src="../photos/svgs/view-toggle.svg" alt=""></button>
                     </div>
                     
                 </div>
@@ -116,7 +116,7 @@
                     <label class="ml-2 mt-2 font-dust text-sm font-semibold">Upload ID Card</label>
                     <div class="w-full flex flex-row">
                         <input class="w-4/5 text-white text-base font-light ml-2 rounded-lg border-white flex justify-between bg-transparent border-2 h-8"></input>
-                        <button data-target="examplePopUpContent2" id="examplePopUpToggle2" class="ml-4 transform hover:scale-110 motion-reduce:transform-none focus:outline-none mr-2 h-full"><img class="m-0 h-8" src="../photos/svgs/view-toggle.svg" alt=""></button>
+                        <button data-target="examplePopUpContent2" id="examplePopUpToggle2"  onclick="openPopUpID()" class="ml-4 transform hover:scale-110 motion-reduce:transform-none focus:outline-none mr-2 h-full"><img class="m-0 h-8" src="../photos/svgs/view-toggle.svg" alt=""></button>
                     </div>
                 </div>
             </div>
@@ -124,8 +124,8 @@
     </div>
 </section>
 <!-- View CV -->
-<section class="flex hidden items-center content-center bg-black fixed top-0 h-screen bg-opacity-50 w-full" id="popUpBackground1">
-    <div id="examplePopUpContent1" class="popUp-Content1 shadow-inner fixed hidden sm:max-w-80 transform -translate-y-1/2 -translate-x-1/2 z-50 py-4 px-8 bg-purples rounded-xl top-1/2 left-1/2">
+<section class="flex hidden items-center content-center bg-black fixed top-0 h-screen bg-opacity-50 w-full" id="openPopUpCV" onclick="closePopCV()">
+    <div id="examplePopUpContent1" class="popUp-Content1 shadow-inner fixed sm:max-w-80 transform -translate-y-1/2 -translate-x-1/2 z-50 py-4 px-8 bg-purples rounded-xl top-1/2 left-1/2">
         <div class="flex flex-col justify-center items-center">
             <h1 class="text-center font-semibold text-3xl text-white tracking-widest">CV</h1>
             <hr class="w-2/3 my-6 mx-auto">
@@ -134,8 +134,8 @@
     </div>
 </section>
 <!-- View ID Card -->
-<section class="flex hidden items-center content-center bg-black fixed top-0 h-screen bg-opacity-50 w-full" id="popUpBackground2">
-    <div id="examplePopUpContent2" class="popUp-Content2 shadow-inner fixed hidden sm:max-w-80 transform -translate-y-1/2 -translate-x-1/2 z-50 py-4 px-8 bg-purples rounded-xl top-1/2 left-1/2">
+<section class="flex hidden items-center content-center bg-black fixed top-0 h-screen bg-opacity-50 w-full" id="openPopUpID" onclick="closePopID()">
+    <div id="examplePopUpContent2" class="popUp-Content2 shadow-inner fixed sm:max-w-80 transform -translate-y-1/2 -translate-x-1/2 z-50 py-4 px-8 bg-purples rounded-xl top-1/2 left-1/2">
         <div class="flex flex-col justify-center items-center">
             <h1 class="text-center font-semibold text-3xl text-white tracking-widest">ID Card</h1>
             <hr class="w-2/3 my-6 mx-auto">
