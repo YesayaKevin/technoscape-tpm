@@ -28,52 +28,104 @@
                     <form class="flex flex-col justify-center items-center content-center">
                         <div class="w-full">
                             <label class="ml-2 mt-2 font-dust text-sm font-semibold">Full Name</label>
-                            <input class="w-full text-white text-base font-light ml-2 rounded-lg border-white bg-transparent border-2 h-8"></input>
+                            <input class="w-full text-white text-base font-light ml-2 rounded-lg border-white bg-transparent border-2 h-8" readonly></input>
                         </div>
                         <div class="w-full">
                             <label class="ml-2 mt-2 font-dust text-sm font-semibold">Email</label>
-                            <input class="w-full text-white text-base font-light ml-2 rounded-lg border-white bg-transparent border-2 h-8"></input>
+                            <input class="w-full text-white text-base font-light ml-2 rounded-lg border-white bg-transparent border-2 h-8" readonly></input>
                         </div>
                         <div class="w-full">
                             <label class="ml-2 mt-2 font-dust text-sm font-semibold">Whatsapp Number</label>
-                            <input class="w-full text-white text-base font-light ml-2 rounded-lg border-white bg-transparent border-2 h-8"></input>
+                            <input class="w-full text-white text-base font-light ml-2 rounded-lg border-white bg-transparent border-2 h-8" readonly></input>
                         </div>
                         <div class="w-full">
                             <label class="ml-2 mt-2 font-dust text-sm font-semibold">Line ID</label>
-                            <input class="w-full text-white text-base font-light ml-2 rounded-lg border-white bg-transparent border-2 h-8"></input>
+                            <input class="w-full text-white text-base font-light ml-2 rounded-lg border-white bg-transparent border-2 h-8" readonly></input>
                         </div>
                         <div class="w-full">
                             <label class="ml-2 mt-2 font-dust text-sm font-semibold">GitHub or Gitlub ID</label>
-                            <input class="w-full text-white text-base font-light ml-2 rounded-lg border-white bg-transparent border-2 h-8"></input>
+                            <input class="w-full text-white text-base font-light ml-2 rounded-lg border-white bg-transparent border-2 h-8" readonly></input>
                         </div>
                         <div class="w-full">
                             <label class="ml-2 mt-2 font-dust text-sm font-semibold">Birth Place</label>
-                            <input class="w-full text-white text-base font-light ml-2 rounded-lg border-white bg-transparent border-2 h-8"></input>
+                            <input class="w-full text-white text-base font-light ml-2 rounded-lg border-white bg-transparent border-2 h-8" readonly></input>
                         </div>
                         <div class="w-full">
                             <label class="ml-2 mt-2 font-dust text-sm font-semibold">Birth Date</label>
-                            <input class="w-full text-white text-base font-light ml-2 rounded-lg border-white bg-transparent border-2 h-8"></input>
+                            <input class="w-full text-white text-base font-light ml-2 rounded-lg border-white bg-transparent border-2 h-8" readonly></input>
                         </div>
                         <div class="w-full flex flex-col">
-                            <label class="ml-2 mt-2 font-dust text-sm font-semibold">Upload CV</label>
+                            <label class="ml-2 mt-2 font-dust text-sm font-semibold">View CV</label>
                             <div class="w-full flex flex-row">
-                                <input class="w-4/5 text-white text-base font-light ml-2 rounded-lg border-white flex justify-between bg-transparent border-2 h-8"></input>
-                                <button data-target="examplePopUpContent1" id="examplePopUpToggle1" class="ml-4 transform hover:scale-110 motion-reduce:transform-none focus:outline-none mr-2 h-full"><img class="m-0 h-8" src="../photos/svgs/view-toggle.svg" alt=""></button>
+                                <input class="w-4/5 text-white text-base font-light ml-2 rounded-lg border-white flex justify-between bg-transparent border-2 h-8" readonly></input>
+                                <button data-target="examplePopUpContent1" id="examplePopUpToggle1" class="ml-4 transform hover:scale-110 motion-reduce:transform-none focus:outline-none mr-2 h-full"><img class="m-0 h-8" src="../photos/svgs/view-toggle.svg" alt="" viewCV()></button>
                             </div>
                             
                         </div>
                         <div class="w-full flex flex-col">
-                            <label class="ml-2 mt-2 font-dust text-sm font-semibold">Upload ID Card</label>
+                            <label class="ml-2 mt-2 font-dust text-sm font-semibold">View ID Card</label>
                             <div class="w-full flex flex-row">
-                                <input class="w-4/5 text-white text-base font-light ml-2 rounded-lg border-white flex justify-between bg-transparent border-2 h-8"></input>
-                                <button data-target="examplePopUpContent2" id="examplePopUpToggle2" class="ml-4 transform hover:scale-110 motion-reduce:transform-none focus:outline-none mr-2 h-full"><img class="m-0 h-8" src="../photos/svgs/view-toggle.svg" alt=""></button>
+                                <input class="w-4/5 text-white text-base font-light ml-2 rounded-lg border-white flex justify-between bg-transparent border-2 h-8" readonly></input>
+                                <button data-target="examplePopUpContent2" id="examplePopUpToggle2" class="ml-4 transform hover:scale-110 motion-reduce:transform-none focus:outline-none mr-2 h-full"><img class="m-0 h-8" src="../photos/svgs/view-toggle.svg" alt="" viewID()></button>
                             </div>
                         </div>
-                        <button type="submit" class="w-40 sm:w-60 bg-purples transform hover:scale-110 motion-reduce:transform-none focus:outline-none mt-6 rounded-lg text-white text-xl py-1 text-semibold">Add Member</button>
+                        <!-- <button type="submit" class="w-40 sm:w-60 bg-purples transform hover:scale-110 motion-reduce:transform-none focus:outline-none mt-6 rounded-lg text-white text-xl py-1 text-semibold">Add Member</button> -->
                     </form>
                 </div>
             </div>
-            <!-- Member Container -->
+             <!-- Member Isi -->
+             <div class="flex flex-col mb-16 rounded-xl w-full w-full md:w-3/5 lg:w-1/2 bg-dust px-8 lg:px-16 2xl:px-32 py-12">
+                <h1 class="text-white text-center font-semibold text-3xl">Member Information</h1>
+                <hr class="w-full h-4 mt-6">
+                <div class="flex flex-col mt-8">
+                    <form class="flex flex-col justify-center items-center content-center">
+                        <div class="w-full">
+                            <label class="ml-2 mt-2 font-dust text-sm font-semibold">Full Name</label>
+                            <input class="w-full text-white text-base font-light ml-2 rounded-lg border-white bg-transparent border-2 h-8" readonly></input>
+                        </div>
+                        <div class="w-full">
+                            <label class="ml-2 mt-2 font-dust text-sm font-semibold">Email</label>
+                            <input class="w-full text-white text-base font-light ml-2 rounded-lg border-white bg-transparent border-2 h-8" readonly></input>
+                        </div>
+                        <div class="w-full">
+                            <label class="ml-2 mt-2 font-dust text-sm font-semibold">Whatsapp Number</label>
+                            <input class="w-full text-white text-base font-light ml-2 rounded-lg border-white bg-transparent border-2 h-8" readonly></input>
+                        </div>
+                        <div class="w-full">
+                            <label class="ml-2 mt-2 font-dust text-sm font-semibold">Line ID</label>
+                            <input class="w-full text-white text-base font-light ml-2 rounded-lg border-white bg-transparent border-2 h-8" readonly></input>
+                        </div>
+                        <div class="w-full">
+                            <label class="ml-2 mt-2 font-dust text-sm font-semibold">GitHub or Gitlub ID</label>
+                            <input class="w-full text-white text-base font-light ml-2 rounded-lg border-white bg-transparent border-2 h-8" readonly></input>
+                        </div>
+                        <div class="w-full">
+                            <label class="ml-2 mt-2 font-dust text-sm font-semibold">Birth Place</label>
+                            <input class="w-full text-white text-base font-light ml-2 rounded-lg border-white bg-transparent border-2 h-8" readonly></input>
+                        </div>
+                        <div class="w-full">
+                            <label class="ml-2 mt-2 font-dust text-sm font-semibold">Birth Date</label>
+                            <input class="w-full text-white text-base font-light ml-2 rounded-lg border-white bg-transparent border-2 h-8" readonly></input>
+                        </div>
+                        <div class="w-full flex flex-col">
+                            <label class="ml-2 mt-2 font-dust text-sm font-semibold">View CV</label>
+                            <div class="w-full flex flex-row">
+                                <input class="w-4/5 text-white text-base font-light ml-2 rounded-lg border-white flex justify-between bg-transparent border-2 h-8" readonly></input>
+                                <button data-target="examplePopUpContent1" id="examplePopUpToggle1" class="ml-4 transform hover:scale-110 motion-reduce:transform-none focus:outline-none mr-2 h-full"><img class="m-0 h-8" src="../photos/svgs/view-toggle.svg" alt="" viewCV()></button>
+                            </div>
+                        </div>
+                        <div class="w-full flex flex-col">
+                            <label class="ml-2 mt-2 font-dust text-sm font-semibold">View ID Card</label>
+                            <div class="w-full flex flex-row">
+                                <input class="w-4/5 text-white text-base font-light ml-2 rounded-lg border-white flex justify-between bg-transparent border-2 h-8" readonly></input>
+                                <button data-target="examplePopUpContent2" id="examplePopUpToggle2" class="ml-4 transform hover:scale-110 motion-reduce:transform-none focus:outline-none mr-2 h-full"><img class="m-0 h-8" src="../photos/svgs/view-toggle.svg" alt="" onclick="viewID()"></button>
+                            </div>
+                        </div>
+                        <!-- <button type="submit" class="w-40 sm:w-60 bg-purples transform hover:scale-110 motion-reduce:transform-none focus:outline-none mt-6 rounded-lg text-white text-xl py-1 text-semibold">Add Member</button> -->
+                    </form>
+                </div>
+            </div>
+            <!-- Member Add -->
             <div class="flex flex-col mb-16 rounded-xl w-full w-full md:w-3/5 lg:w-1/2 bg-dust px-8 lg:px-16 2xl:px-32 py-12">
                 <h1 class="text-white text-center font-semibold text-3xl">Member Information</h1>
                 <hr class="w-full h-4 mt-6">
@@ -110,14 +162,14 @@
                         <div class="w-full flex flex-col">
                             <label class="ml-2 mt-2 font-dust text-sm font-semibold">Upload CV</label>
                             <div class="w-full flex flex-row">
-                                <input class="w-4/5 text-white text-base font-light ml-2 rounded-lg border-white flex justify-between bg-transparent border-2 h-8"></input>
+                                <input type="file" accept="image/png, image/jpeg, image/jpg, image/pdf" class="w-4/5 text-white text-base font-light ml-2 rounded-lg border-white flex justify-between bg-transparent border-2 h-8" readonly></input>
                                 <button data-target="examplePopUpContent1" id="examplePopUpToggle1" class="ml-4 transform hover:scale-110 motion-reduce:transform-none focus:outline-none mr-2 h-full"><img class="m-0 h-8" src="../photos/svgs/view-toggle.svg" alt=""></button>
                             </div>
                         </div>
                         <div class="w-full flex flex-col">
                             <label class="ml-2 mt-2 font-dust text-sm font-semibold">Upload ID Card</label>
                             <div class="w-full flex flex-row">
-                                <input class="w-4/5 text-white text-base font-light ml-2 rounded-lg border-white flex justify-between bg-transparent border-2 h-8"></input>
+                                <input type="file" accept="image/png, image/jpeg, image/jpg, image/pdf" class="w-4/5 text-white text-base font-light ml-2 rounded-lg border-white flex justify-between bg-transparent border-2 h-8" readonly></input>
                                 <button data-target="examplePopUpContent2" id="examplePopUpToggle2" class="ml-4 transform hover:scale-110 motion-reduce:transform-none focus:outline-none mr-2 h-full"><img class="m-0 h-8" src="../photos/svgs/view-toggle.svg" alt=""></button>
                             </div>
                         </div>
