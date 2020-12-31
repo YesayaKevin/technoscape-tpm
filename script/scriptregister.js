@@ -26,6 +26,73 @@ function showTab() {
     }
 }
 
+var whatsapp = document.getElementById("wa_num");
+whatsapp.onfocus = function () {
+    document.getElementById("wa-msg").style.display = "block";
+}
+whatsapp.onblur = function () {
+    document.getElementById("wa-msg").style.display = "none";
+}
+whatsapp.onkeyup = function () {
+    if (whatsapp.value.length < 9) {
+        document.getElementById("wa-msg").style.display = "block";
+    }
+    else {
+        document.getElementById("wa-msg").style.display = "none";
+    }
+}
+
+var password = document.getElementById("password");
+password.onfocus = function () {
+    document.getElementById("message").style.display = "block";
+}
+password.onblur = function () {
+    document.getElementById("message").style.display = "none";
+}
+password.onkeyup = function () {
+    var lowerCase = /[a-z]/g;
+    if (password.value.match(lowerCase)) {
+        document.getElementById("lowercase").style.display = "none";
+    } else {
+        document.getElementById("lowercase").style.display = "block";
+    }
+    var upperCase = /[A-Z]/g;
+    if (password.value.match(upperCase)) {
+        document.getElementById("uppercase").style.display = "none";
+    } else {
+        document.getElementById("uppercase").style.display = "block";
+    }
+    var number = /[0-9]/g;
+    if (password.value.match(number)) {
+        document.getElementById("number").style.display = "none";
+    } else {
+        document.getElementById("number").style.display = "block";
+    }
+    if (password.value.length >= 8) {
+        document.getElementById("length").style.display = "none";
+    } else {
+        document.getElementById("length").style.display = "block";
+    }
+}
+
+var confirmPass = document.getElementById("confirm");
+confirmPass.onfocus = function () {
+    if (confirmPass.value != password.value) {
+        document.getElementById("confirm-message").style.display = "block";
+    }
+    else {
+        document.getElementById("confirm-message").style.display = "none";
+    }
+}
+
+function showPass() {
+    if (password.type === "password") {
+        password.type = "text";
+    } else if (password.type === "text") {
+        password.type = "password";
+    }
+}
+
 function validateForm() {
     var x = document.forms["form-register"]["team_name"].value;
     if (x.length < 8) {
@@ -92,54 +159,3 @@ forms.addEventListener('submit', function (e) {
     return true;
 }
 )
-
-var password = document.getElementById("password");
-password.onfocus = function () {
-    document.getElementById("message").style.display = "block";
-}
-password.onblur = function () {
-    document.getElementById("message").style.display = "none";
-}
-password.onkeyup = function () {
-    var lowerCase = /[a-z]/g;
-    if (password.value.match(lowerCase)) {
-        document.getElementById("lowercase").style.display = "none";
-    } else {
-        document.getElementById("lowercase").style.display = "block";
-    }
-    var upperCase = /[A-Z]/g;
-    if (password.value.match(upperCase)) {
-        document.getElementById("uppercase").style.display = "none";
-    } else {
-        document.getElementById("uppercase").style.display = "block";
-    }
-    var number = /[0-9]/g;
-    if (password.value.match(number)) {
-        document.getElementById("number").style.display = "none";
-    } else {
-        document.getElementById("number").style.display = "block";
-    }
-    if (password.value.length >= 8) {
-        document.getElementById("length").style.display = "none";
-    } else {
-        document.getElementById("length").style.display = "block";
-    }
-}
-
-var confirmPass = document.getElementById("confirm");
-confirmPass.onfocus = function () {
-    if (confirmPass.value != password.value) {
-        document.getElementById("confirm-message").style.display = "block";
-    }
-    else {
-        document.getElementById("confirm-message").style.display = "none";
-    }
-}
-
-function showPass() {
-    if (password.type === "password") {
-        password.type = "text";
-    } else if (password.type === "text") {
-        password.type = "password";
-    }
-}

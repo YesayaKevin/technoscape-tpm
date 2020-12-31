@@ -90,7 +90,10 @@
                     <div id="leader" class="space-y-4 hidden">
                         <input type="text" name="full_name" placeholder="Full Name" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full" required/>
                         <input type="email" name="email" placeholder="Email" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full" required/>
-                        <input type="text" name="wa_num" placeholder="Whatsapp Number" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full" required/>
+                        <input type="text" name="wa_num" placeholder="Whatsapp Number" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full" required id="wa_num"/>
+                        <div id="wa-msg" class="text-red-500 hidden">
+                            <p>Whatsapp number must be atleast 9 characters long</p>
+                        </div>
                         <input type="text" name="lineID" placeholder="LINE ID" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full" required/>
                         <input type="text" name="github" placeholder="Github or Gitlab ID" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full" required/>
                         <input type="text" name="birthplace" placeholder="Birth Place" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full" required/>
