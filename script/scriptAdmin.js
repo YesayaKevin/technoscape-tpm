@@ -13,21 +13,21 @@ reject.addEventListener("click", statusReject)
 examplePopUpToggle.addEventListener("click", openPopUp)
 popUpBackground.addEventListener("click", closePopUp)
 
-function openPopUp(){
+function openPopUp() {
     const target = document.getElementById(this.dataset.target)
     target.classList.toggle("hidden", false)
     popUpBackground.classList.toggle("hidden", false)
 }
 
-function closePopUp(){
+function closePopUp() {
     const popUpContents = document.getElementsByClassName("popUp-Content")
-    for(content of popUpContents){
+    for (content of popUpContents) {
         content.classList.toggle("hidden", true)
     }
     this.classList.toggle("hidden", true)
 }
 
-function statusApprove(){
+function statusApprove() {
     const target = document.getElementById(this.dataset.target)
     target.classList.toggle("text-white", false)
     target.classList.toggle("text-red-500", false)
@@ -35,7 +35,7 @@ function statusApprove(){
     target.innerHTML = "Verified"
 }
 
-function statusReject(){
+function statusReject() {
     const target = document.getElementById(this.dataset.target)
     target.classList.toggle("text-white", false)
     target.classList.toggle("text-red-500", true)
@@ -43,16 +43,41 @@ function statusReject(){
     target.innerHTML = "Rejected"
 }
 
-function closeStatusPopUp(){
+function closeStatusPopUp() {
     const popUpContents = document.getElementsByClassName("popUp-Status")
-    for(content of popUpContents){
+    for (content of popUpContents) {
         content.classList.toggle("hidden", true)
     }
     popUpPaymentStatus.classList.toggle("hidden", true)
 }
 
-function openStatusPopUp(){
+function openStatusPopUp() {
     const target = document.getElementById(this.dataset.target)
     target.classList.toggle("hidden", false)
     popUpPaymentStatus.classList.toggle("hidden", false)
 }
+
+
+
+$(document).ready(function () {
+    $("#popUpBackground").hide();
+
+    $(".buttons").click(function () {
+        $("#popUpBackground").show();
+        $("#examplePopUpContent").show();
+    });
+
+    $("#popUpBackground").click(function () {
+        $(this).hide();
+    });
+
+    $("#popUpPaymentStatus").hide();
+
+    $(".buttonZ").click(function () {
+        $("#popUpPaymentStatus").show();
+    });
+
+    $("#popUpPaymentStatus").click(function () {
+        $(this).hide();
+    });
+});

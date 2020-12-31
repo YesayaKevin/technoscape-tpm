@@ -41,8 +41,8 @@
                         </div>
                     </div>
                     <div class="w-1/4 flex flex-col justify-around">
-                        <button data-target="examplePopUpContent" id="examplePopUpToggle" class="transform hover:scale-110 motion-reduce:transform-none focus:outline-none"><img class="w-full" src="../photos/svgs/view-dashboardA2.svg" alt=""></button>
-                        <button data-target="statusPopUpContent" id="statusPopUpToggle" class="transform hover:scale-110 motion-reduce:transform-none focus:outline-none"><img class="w-full" src="../photos/svgs/status-dashboard.svg" alt=""></button>
+                        <button data-target="examplePopUpContent" id="examplePopUpToggle" class="transform hover:scale-110 motion-reduce:transform-none focus:outline-none buttons"><img class="w-full" src="../photos/svgs/view-dashboardA2.svg" alt=""></button>
+                        <button data-target="statusPopUpContent" id="statusPopUpToggle" class="transform hover:scale-110 motion-reduce:transform-none focus:outline-none buttonZ"><img class="w-full" src="../photos/svgs/status-dashboard.svg" alt=""></button>
                     </div>
                 </div>
             </div>
@@ -64,8 +64,8 @@
                         </div>
                     </div>
                     <div class="w-1/4 flex flex-col justify-around">
-                        <button data-target="examplePopUpContent" id="examplePopUpToggle" class="transform hover:scale-110 motion-reduce:transform-none focus:outline-none"><img class="w-full" src="../photos/svgs/view-dashboardA2.svg" alt=""></button>
-                        <button data-target="statusPopUpContent" id="statusPopUpToggle" class="transform hover:scale-110 motion-reduce:transform-none focus:outline-none"><img class="w-full" src="../photos/svgs/status-dashboard.svg" alt=""></button>
+                        <button data-target="examplePopUpContent" id="examplePopUpToggle" class="transform hover:scale-110 motion-reduce:transform-none focus:outline-none buttons" id="buttons"><img class="w-full" src="../photos/svgs/view-dashboardA2.svg" alt=""></button>
+                        <button data-target="statusPopUpContent" id="statusPopUpToggle" class="transform hover:scale-110 motion-reduce:transform-none focus:outline-none buttonZ"><img class="w-full" src="../photos/svgs/status-dashboard.svg" alt=""></button>
                     </div>
                 </div>
             </div>
@@ -74,8 +74,8 @@
     </div>
 </section>
 <!-- PopUp Images -->
-<section class="flex hidden items-center content-center bg-black fixed top-0 h-screen bg-opacity-50 w-full" id="popUpBackground">
-    <div class="popUp-Content shadow-inner fixed hidden sm:max-w-80 transform -translate-y-1/2 -translate-x-1/2 z-50 py-4 px-8 bg-dust rounded-xl top-1/2 left-1/2" id="examplePopUpContent">
+<section class="flex items-center content-center bg-black fixed top-0 h-screen bg-opacity-50 w-full popUpBackground" id="popUpBackground">
+    <div class="popUp-Content shadow-inner fixed  sm:max-w-80 transform -translate-y-1/2 -translate-x-1/2 z-50 py-4 px-8 bg-dust rounded-xl top-1/2 left-1/2" id="examplePopUpContent">
         <div class="flex flex-col justify-center items-center">
             <h1 class="text-center font-semibold text-3xl text-white tracking-widest">Payment</h1>
             <hr class="w-2/3 my-6 mx-auto">
@@ -84,8 +84,8 @@
     </div>
 </section>
 <!-- PopUp Payment Status -->
-<section class="flex items-center hidden content-center bg-black fixed top-0 h-screen bg-opacity-50 w-full" id="popUpPaymentStatus">
-    <div id="statusPopUpContent" class="popUp-Status w-80 flex flex-col sm:w-96 hidden fixed top-4 transform -translate-x-1/2 z-50 py-4 bg-dust rounded-xl left-1/2" id="examplePopUpContent">
+<section class="flex items-center hidden content-center bg-black fixed top-0 h-screen bg-opacity-50 w-full popUpPay " id="popUpPaymentStatus">
+    <div id="statusPopUpContent" class="popUp-Status w-80 flex flex-col sm:w-96 fixed top-4 transform -translate-x-1/2 z-50 py-4 bg-dust rounded-xl left-1/2" id="examplePopUpContent">
         <button class="transform hover:scale-110 motion-reduce:transform-none text-white inline-block self-end text-right mr-4" id="closeStatus"><img height="24px" width="24px" src="../photos/svgs/close.svg" alt=""></button>
         <div class="flex justify-center px-4 pb-4">
             <h1 class="text-white text-center font-semibold tracking-widest justify-self-center text-xl">Verify Payment</h1>
@@ -100,6 +100,7 @@
         </div>
     </div>
 </section>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 <script src="../script/scriptAdmin.js"></script>
 </body>
 </html>
