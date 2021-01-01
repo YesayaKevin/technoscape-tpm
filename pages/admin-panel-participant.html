@@ -9,12 +9,13 @@
     <title>Admin Panel - Dashboard</title>
 </head>
 <body class="m-0 p-0">
+<div id="delete-pop-up-bg" class="bg-black bg-opacity-50 fixed h-screen w-screen top-0 z-40 hidden"></div>
 <nav class="flex flex-row bg-gradient-to-b fixed top-0 from-purple-600 bg-opacity-50 justify-between w-full">
     <img src="../photos/ehackathon_logo_1.png" alt="" class="transform hover:scale-110 motion-reduce:transform-none ml-0 sm:ml-4 md:ml-8" height="100px" width="100px"/>
-    <div class="bg-ocean flex flex-row justify-between rounded-bl-3xl p-2 w-60 xl:w-80 h-1/2">
-        <a class="mx-auto transform hover:scale-110 motion-reduce:transform-none flex justify-center items-center" href="../pages/admin-panel-dashboard.html"><img height="50px" width="50px" src="../photos/svgs/nav-admin-pay.svg" alt="nav.svg"></a>
-        <a class="mx-auto transform hover:scale-110 motion-reduce:transform-none flex justify-center items-center" href="../pages/admin-panel-participant.html"><img height="50px" width="50px" src="../photos/svgs/nav-admin-part.svg" alt="nav.svg"></a>
-        <form><button type="submit" class="mx-auto transform hover:scale-110 motion-reduce:transform-none flex justify-center items-center" href="../index.html"><img height="50px" width="50px" src="../photos/svgs/nav-admin-logout.svg" alt="nav.svg"></button></form>
+    <div class="bg-ocean flex flex-row justify-around rounded-bl-3xl p-2 w-60 xl:w-80 h-1/2">
+        <a class="transform hover:scale-110 motion-reduce:transform-none flex justify-center items-center" href="../pages/admin-panel-dashboard.html"><img height="50px" width="50px" src="../photos/svgs/nav-admin-pay.svg" alt="nav.svg"></a>
+        <a class="transform hover:scale-110 motion-reduce:transform-none flex justify-center items-center" href="../pages/admin-panel-participant.html"><img height="50px" width="50px" src="../photos/svgs/nav-admin-part.svg" alt="nav.svg"></a>
+        <form><button type="submit" class="focus:outline-none transform hover:scale-110 motion-reduce:transform-none flex justify-center items-center" href="../index.html"><img height="50px" width="50px" src="../photos/svgs/nav-admin-logout.svg" alt="nav.svg"></button></form>
     </div>
 </nav>
 <section class="min-h-screen bg-blacks px-8 sm:px-24">
@@ -23,7 +24,8 @@
         <hr class="bg-white w-4/5 lg:w-1/2 mt-8">
         <div class="w-full flex flex-row flex-wrap">
             <!-- Card Container -->
-            <div class="w-full sm:w-1/2 xl:w-80 2xl:w-96 p-0 mt-8 md:p-4 lg:p-8">
+            <div class="delete-pop-up-card w-full sm:w-1/2 xl:w-80 2xl:w-96 p-0 mt-8 md:p-4 lg:p-8">
+                <!-- Card -->
                 <div class="w-full flex flex-row rounded-xl bg-purples hover:bg-purple-900 p-8">
                     <div class="w-full flex flex-col justify-center">
                         <h1 class="text-white font-semibold text-xl text-center tracking-widest">NAME</h1>
@@ -31,69 +33,83 @@
                         <div class="flex w-full justify-around">
                             <button class="transform hover:scale-110 motion-reduce:transform-none"><a href="../pages/view-data.html"><img class="w-12 sm:w-14 md:w-16 lg:w-18 xl:w-20" src="../photos/svgs/view-dashboardA2.svg" alt="edit.svg"></a></button>
                             <button class="transform hover:scale-110 motion-reduce:transform-none"><a href="../pages/edit-data.html"><img class="w-12 sm:w-14 md:w-16 lg:w-18 xl:w-20" src="../photos/svgs/edit-dashboardA.svg" alt="edit.svg"></a></button>
-                            <button data-target="statusPopUpContent" id="statusPopUpToggle" class="transform hover:scale-110 motion-reduce:transform-none buttonZ"><img class="w-12 sm:w-14 md:w-16 lg:w-18 xl:w-20" src="../photos/svgs/delete-dashboardA.svg" alt="edit.svg"></button>
+                            <button class="focus:outline-none delete-pop-up-btn transform hover:scale-110 motion-reduce:transform-none buttonZ"><img class="w-12 sm:w-14 md:w-16 lg:w-18 xl:w-20" src="../photos/svgs/delete-dashboardA.svg" alt="edit.svg"></button>
+                            <!--delete pop up -->
+                            <div class="delete-pop-up hidden w-80 flex flex-col sm:w-96 fixed top-4 transform -translate-x-1/2 z-50 py-4 bg-dust rounded-xl left-1/2">
+                                <div class="flex justify-center px-4 pb-4">
+                                    <h1 class="text-white text-center font-semibold tracking-widest justify-self-center text-xl">Delete Participant</h1>
+                                </div>
+                                <hr class="w-2/3 mx-auto">
+                                <div class="flex items-center px-4 py-4 justify-center">
+                                    <p class="text-center font-semibold text-white text-sm">Delete Participant?</p>
+                                </div> 
+                                <div class="flex justify-center px-4 pt-4 space-x-2">
+                                    <button class="focus:outline-none cancel-btn transform hover:scale-110 motion-reduce:transform-none rounded-xl font-semibold bg-ocean text-white text-sm p-2">Cancel</button>
+                                    <form><button type="submit" class="focus:outline-none delete-btn transform hover:scale-110 motion-reduce:transform-none rounded-xl font-semibold bg-purples text-white text-sm p-2">Delete</button></form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Card Container -->
-            <div class="w-full sm:w-1/2 xl:w-80 2xl:w-96 p-0 mt-8 md:p-4 lg:p-8">
+            <div class="delete-pop-up-card w-full sm:w-1/2 xl:w-80 2xl:w-96 p-0 mt-8 md:p-4 lg:p-8">
+                <!-- Card -->
                 <div class="w-full flex flex-row rounded-xl bg-purples hover:bg-purple-900 p-8">
                     <div class="w-full flex flex-col justify-center">
-                        <h1 class="text-white font-semibold text-xl text-center tracking-widest">NAME</h1>
+                        <h1 class="text-white font-semibold text-xl text-center tracking-widest">NAMfdsaE</h1>
                         <hr class="my-4 w-full">
                         <div class="flex w-full justify-around">
                             <button class="transform hover:scale-110 motion-reduce:transform-none"><a href="../pages/view-data.html"><img class="w-12 sm:w-14 md:w-16 lg:w-18 xl:w-20" src="../photos/svgs/view-dashboardA2.svg" alt="edit.svg"></a></button>
                             <button class="transform hover:scale-110 motion-reduce:transform-none"><a href="../pages/edit-data.html"><img class="w-12 sm:w-14 md:w-16 lg:w-18 xl:w-20" src="../photos/svgs/edit-dashboardA.svg" alt="edit.svg"></a></button>
-                            <button data-target="statusPopUpContent" id="statusPopUpToggle" class="transform hover:scale-110 motion-reduce:transform-none buttonZ"><img class="w-12 sm:w-14 md:w-16 lg:w-18 xl:w-20" src="../photos/svgs/delete-dashboardA.svg" alt="edit.svg"></button>
+                            <button class="focus:outline-none delete-pop-up-btn transform hover:scale-110 motion-reduce:transform-none buttonZ"><img class="w-12 sm:w-14 md:w-16 lg:w-18 xl:w-20" src="../photos/svgs/delete-dashboardA.svg" alt="edit.svg"></button>
+                            <!--delete pop up -->
+                            <div class="delete-pop-up hidden w-80 flex flex-col sm:w-96 fixed top-4 transform -translate-x-1/2 z-50 py-4 bg-dust rounded-xl left-1/2">
+                                <div class="flex justify-center px-4 pb-4">
+                                    <h1 class="text-white text-center font-semibold tracking-widest justify-self-center text-xl">Delete Participant</h1>
+                                </div>
+                                <hr class="w-2/3 mx-auto">
+                                <div class="flex items-center px-4 py-4 justify-center">
+                                    <p class="text-center font-semibold text-white text-sm">Delete Participant?</p>
+                                </div> 
+                                <div class="flex justify-center px-4 pt-4 space-x-2">
+                                    <button class="cancel-btn focus:outline-none transform hover:scale-110 motion-reduce:transform-none rounded-xl font-semibold bg-ocean text-white text-sm p-2">Cancel</button>
+                                    <form><button type="submit" class="delete-btn focus:outline-none transform hover:scale-110 motion-reduce:transform-none rounded-xl font-semibold bg-purples text-white text-sm p-2">Delete</button></form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Card Container -->
-            <div class="w-full sm:w-1/2 xl:w-80 2xl:w-96 p-0 mt-8 md:p-4 lg:p-8">
+            <div class="delete-pop-up-card w-full sm:w-1/2 xl:w-80 2xl:w-96 p-0 mt-8 md:p-4 lg:p-8">
+                <!-- Card -->
                 <div class="w-full flex flex-row rounded-xl bg-purples hover:bg-purple-900 p-8">
                     <div class="w-full flex flex-col justify-center">
-                        <h1 class="text-white font-semibold text-xl text-center tracking-widest">NAME</h1>
+                        <h1 class="text-white font-semibold text-xl text-center tracking-widest">asdf</h1>
                         <hr class="my-4 w-full">
                         <div class="flex w-full justify-around">
                             <button class="transform hover:scale-110 motion-reduce:transform-none"><a href="../pages/view-data.html"><img class="w-12 sm:w-14 md:w-16 lg:w-18 xl:w-20" src="../photos/svgs/view-dashboardA2.svg" alt="edit.svg"></a></button>
                             <button class="transform hover:scale-110 motion-reduce:transform-none"><a href="../pages/edit-data.html"><img class="w-12 sm:w-14 md:w-16 lg:w-18 xl:w-20" src="../photos/svgs/edit-dashboardA.svg" alt="edit.svg"></a></button>
-                            <button data-target="statusPopUpContent" id="statusPopUpToggle" class="transform hover:scale-110 motion-reduce:transform-none buttonZ"><img class="w-12 sm:w-14 md:w-16 lg:w-18 xl:w-20" src="../photos/svgs/delete-dashboardA.svg" alt="edit.svg"></button>
+                            <button class="focus:outline-none delete-pop-up-btn transform hover:scale-110 motion-reduce:transform-none buttonZ"><img class="w-12 sm:w-14 md:w-16 lg:w-18 xl:w-20" src="../photos/svgs/delete-dashboardA.svg" alt="edit.svg"></button>
+                            <!--delete pop up -->
+                            <div class="delete-pop-up hidden w-80 flex flex-col sm:w-96 fixed top-4 transform -translate-x-1/2 z-50 py-4 bg-dust rounded-xl left-1/2">
+                                <div class="flex justify-center px-4 pb-4">
+                                    <h1 class="text-white text-center font-semibold tracking-widest justify-self-center text-xl">Delete Participant</h1>
+                                </div>
+                                <hr class="w-2/3 mx-auto">
+                                <div class="flex items-center px-4 py-4 justify-center">
+                                    <p class="text-center font-semibold text-white text-sm">Delete Participant?</p>
+                                </div> 
+                                <div class="flex justify-center px-4 pt-4 space-x-2">
+                                    <button class="cancel-btn focus:outline-none transform hover:scale-110 motion-reduce:transform-none rounded-xl font-semibold bg-ocean text-white text-sm p-2">Cancel</button>
+                                    <form><button type="submit" class="delete-btn focus:outline-none transform hover:scale-110 motion-reduce:transform-none rounded-xl font-semibold bg-purples text-white text-sm p-2">Delete</button></form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Card Container -->
-            <div class="w-full sm:w-1/2 xl:w-80 2xl:w-96 p-0 mt-8 md:p-4 lg:p-8">
-                <div class="w-full flex flex-row rounded-xl bg-purples hover:bg-purple-900 p-8">
-                    <div class="w-full flex flex-col justify-center">
-                        <h1 class="text-white font-semibold text-xl text-center tracking-widest">NAME</h1>
-                        <hr class="my-4 w-full">
-                        <div class="flex w-full justify-around">
-                            <button class="transform hover:scale-110 motion-reduce:transform-none"><a href="../pages/view-data.html"><img class="w-12 sm:w-14 md:w-16 lg:w-18 xl:w-20" src="../photos/svgs/view-dashboardA2.svg" alt="edit.svg"></a></button>
-                            <button class="transform hover:scale-110 motion-reduce:transform-none"><a href="../pages/edit-data.html"><img class="w-12 sm:w-14 md:w-16 lg:w-18 xl:w-20" src="../photos/svgs/edit-dashboardA.svg" alt="edit.svg"></a></button>
-                            <button data-target="statusPopUpContent" id="statusPopUpToggle" class="transform hover:scale-110 motion-reduce:transform-none buttonZ"><img class="w-12 sm:w-14 md:w-16 lg:w-18 xl:w-20" src="../photos/svgs/delete-dashboardA.svg" alt="edit.svg"></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- PopUp Payment Status -->
-<section class="flex items-center content-center bg-black fixed top-0 h-screen bg-opacity-50 w-full" id="popUpPaymentStatus">
-    <div id="statusPopUpContent" class="popUp-Status w-80 flex flex-col sm:w-96 fixed top-4 transform -translate-x-1/2 z-50 py-4 bg-dust rounded-xl left-1/2" id="examplePopUpContent">
-        <div class="flex justify-center px-4 pb-4">
-            <h1 class="text-white text-center font-semibold tracking-widest justify-self-center text-xl">Delete Participant</h1>
-        </div>
-        <hr class="w-2/3 mx-auto">
-        <div class="flex items-center px-4 py-4 justify-center">
-            <p class="text-center font-semibold text-white text-sm">Delete Participant?</p>
-        </div> 
-        <div class="flex justify-center px-4 pt-4 space-x-2">
-            <button id="closeStatus" class="transform hover:scale-110 motion-reduce:transform-none rounded-xl font-semibold bg-ocean text-white text-sm p-2">Cancel</button>
-            <form><button type="submit" data-target="paymentStatus" id="closeStatus1" class="transform hover:scale-110 motion-reduce:transform-none rounded-xl font-semibold bg-purples text-white text-sm p-2">Delete</button></form>
         </div>
     </div>
 </section>
