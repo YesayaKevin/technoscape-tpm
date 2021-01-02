@@ -35,7 +35,7 @@
                 <!-- Left Side -->
                 <a href="#" class="transform hover:scale-110 motion-reduce:transform-none p-3"><img src="../photos/ehackathon_logo_1.png" alt="logo-brand.jpg" height="75px" width="75px"></a>
                 <!-- Right Side -->
-                <button type="button" class="m-0" id="options-menu" aria-haspopup="true" aria-expanded="true" onclick="show()"><svg viewBox="0 0 448 512" width="20" title="align-right" fill="gray" ><path d="M16 224h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16zm416 192H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm3.17-384H172.83A12.82 12.82 0 0 0 160 44.83v38.34A12.82 12.82 0 0 0 172.83 96h262.34A12.82 12.82 0 0 0 448 83.17V44.83A12.82 12.82 0 0 0 435.17 32zm0 256H172.83A12.82 12.82 0 0 0 160 300.83v38.34A12.82 12.82 0 0 0 172.83 352h262.34A12.82 12.82 0 0 0 448 339.17v-38.34A12.82 12.82 0 0 0 435.17 288z" /></svg></button>
+                <button type="button" class="m-0 focus:outline-none" id="options-menu" aria-haspopup="true" aria-expanded="true" onclick="show()"><svg viewBox="0 0 448 512" width="20" title="align-right" fill="gray" ><path d="M16 224h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16zm416 192H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm3.17-384H172.83A12.82 12.82 0 0 0 160 44.83v38.34A12.82 12.82 0 0 0 172.83 96h262.34A12.82 12.82 0 0 0 448 83.17V44.83A12.82 12.82 0 0 0 435.17 32zm0 256H172.83A12.82 12.82 0 0 0 160 300.83v38.34A12.82 12.82 0 0 0 172.83 352h262.34A12.82 12.82 0 0 0 448 339.17v-38.34A12.82 12.82 0 0 0 435.17 288z" /></svg></button>
             </div>
             <ul class="text-white self-center text-xl sm:border-none bg-black bg-opacity-90 flex flex-col" id="dropdown" style="display: none">
                 <li class="inline-block w-full flex justify-center"><a href="../index.html#home-section" class="text-center p-3 hover:text-red-500">Home</a></li>
@@ -53,15 +53,15 @@
             <div class="mx-auto space-y-4" id="login-form">
                 <h1 class="text-xl text-center text-white m-0">LOGIN</h1>
                 <form action="" class=" space-y-4">
-                    <input type="text" name="team_name" placeholder="Group Name" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full" required>
-                    <input type="password" name="password" placeholder="Password" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full" required>
+                    <input type="text" name="team_name" placeholder="Group Name" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full pl-2" required>
+                    <input type="password" name="password" placeholder="Password" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full pl-2" required>
                     <div class="space-x-2 pl-2 flex flex-row items-center">
                         <input type="checkbox" class="checked:bg-blue-600 checked:border-transparent" id="remember-me">
                         <label for="remember-me" class="text-white">Remember Me</label>
                     </div>
                     <p class="text-white">Not yet have an account? <a href="../pages/register.html" class="text-yellow-200">Click here</a></p>
                     <div class="flex justify-center">
-                        <button type="submit" class="w-2/3 sm:w-1/2 h-9 bg-blue-700 active:bg-blue-700 text-white rounded-md mx-auto">Submit</button>
+                        <button type="submit" class="w-2/3 sm:w-1/2 h-9 bg-blue-700 active:bg-blue-700 text-white rounded-md mx-auto focus:outline-none">Submit</button>
                     </div>
                 </form>
             </div>

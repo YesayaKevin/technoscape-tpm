@@ -36,14 +36,14 @@
                 <!-- Left Side -->
                 <a href="#" class="transform hover:scale-110 motion-reduce:transform-none p-3"><img src="../photos/ehackathon_logo_1.png" alt="logo-brand.jpg" height="75px" width="75px"></a>
                 <!-- Right Side -->
-                <button type="button" class="m-0" id="options-menu" aria-haspopup="true" aria-expanded="true" onclick="show()"><svg viewBox="0 0 448 512" width="20" title="align-right" fill="gray" ><path d="M16 224h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16zm416 192H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm3.17-384H172.83A12.82 12.82 0 0 0 160 44.83v38.34A12.82 12.82 0 0 0 172.83 96h262.34A12.82 12.82 0 0 0 448 83.17V44.83A12.82 12.82 0 0 0 435.17 32zm0 256H172.83A12.82 12.82 0 0 0 160 300.83v38.34A12.82 12.82 0 0 0 172.83 352h262.34A12.82 12.82 0 0 0 448 339.17v-38.34A12.82 12.82 0 0 0 435.17 288z" /></svg></button>
+                <button type="button" class="m-0 focus:outline-none" id="options-menu" aria-haspopup="true" aria-expanded="true" onclick="show()"><svg viewBox="0 0 448 512" width="20" title="align-right" fill="gray" ><path d="M16 224h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16zm416 192H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm3.17-384H172.83A12.82 12.82 0 0 0 160 44.83v38.34A12.82 12.82 0 0 0 172.83 96h262.34A12.82 12.82 0 0 0 448 83.17V44.83A12.82 12.82 0 0 0 435.17 32zm0 256H172.83A12.82 12.82 0 0 0 160 300.83v38.34A12.82 12.82 0 0 0 172.83 352h262.34A12.82 12.82 0 0 0 448 339.17v-38.34A12.82 12.82 0 0 0 435.17 288z" /></svg></button>
             </div>
             <ul class="text-white self-center text-xl sm:border-none bg-black bg-opacity-90 flex flex-col" id="dropdown" style="display: none">
                 <li class="inline-block w-full flex justify-center"><a href="../index.html#home-section" class="text-center p-3 hover:text-red-500">Home</a></li>
                 <li class="inline-block w-full flex justify-center"><a href="../index.html#champion-section" class="text-center p-3 hover:text-red-500">Champion</a></li>
                 <li class="inline-block w-full flex justify-center"><a href="../index.html#aboutus-section" class="text-center p-3 hover:text-red-500">About Us</a></li>
                 <li class="inline-block w-full flex justify-center"><a href="../index.html#faq-section" class="text-center p-3 hover:text-red-500">FaQ</a></li>
-                <li class="inline-block w-full flex justify-center"><a href="../index.html#timeline-section" class="text-center p-3 hover:text-red-500">Timeline</a></li>
+                <li class="inline-bloc  k w-full flex justify-center"><a href="../index.html#timeline-section" class="text-center p-3 hover:text-red-500">Timeline</a></li>
                 <li class="inline-block w-full flex justify-center"><a href="../pages/login.html" class="my-2 px-3 py-1 hover:text-red-500 bg-black bg-opacity-50 rounded-md border-2 border-gradient">Login</a></li>
             </ul>
         </div>
@@ -54,14 +54,14 @@
                 <h1 class="text-xl text-center text-white m-0">REGISTER</h1>
                 <!-- buttons buat switch -->
                 <div class="flex justify-center">
-                    <button class="border-1 border-white text-white text-xs w-24 h-7 rounded-full" style="background-color: purple" id="team-btn" onclick="showTab()">Team</button>
-                    <button class="border-1 border-white text-white text-xs w-24 h-7 rounded-full" id="lead-btn" onclick="showTab()">Leader</button>
+                    <button class="border-1 border-white text-white text-xs w-24 h-7 rounded-l-full focus:outline-none" style="background-color: #3C90E3;" id="team-btn" onclick="showTab()">Team</button>
+                    <button class="border- border-white text-white text-xs w-24 h-7 rounded-r-full focus:outline-none" style="background-color: #5bb7f0;" id="lead-btn" onclick="showTab()">Leader</button>
                 </div>
                 <!-- button buat switch -->
                 <form action="" name="form-register" id="register-forms">
                     <div id="team" class="space-y-4 mx-auto flex flex-col">
-                        <input type="text" name="team_name" placeholder="Group Name" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full" required/>
-                        <input type="password" name="password" placeholder="Password" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full" required id="password"/>
+                        <input type="text" name="team_name" placeholder="Group Name" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full pl-2" required/>
+                        <input type="password" name="password" placeholder="Password" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full pl-2" required id="password"/>
                         <div>
                             <input type="checkbox" onclick="showPass()"> Show Password
                         </div>
@@ -71,7 +71,7 @@
                             <p id="number">Password must contain at least 1 number</p>
                             <p id="length">Password must be at least 8 characters</p>
                         </div>
-                        <input type="password" name="confirm-password" placeholder="Confirmation Password" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full" required id="confirm"/>
+                        <input type="password" name="confirm-password" placeholder="Confirmation Password" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full pl-2" required id="confirm"/>
                         <p class="hidden text-red-500" id="confirm-message">Passwords do not match!</p>
                         <div class="flex flex-row justify-around">
                             <div>
@@ -84,19 +84,19 @@
                             </div>
                         </div>
                         <div class="flex justify-center">
-                            <button class="w-1/2 h-9 bg-blue-700 text-white rounded-md px-1" id="next-btn" onclick="showTab()">Next</button>
+                            <button class="w-1/2 h-9 bg-ocean text-white rounded-full px-1 focus:outline-none" id="next-btn" onclick="showTab()">Next</button>
                         </div>
                     </div>
                     <div id="leader" class="space-y-4 hidden">
-                        <input type="text" name="full_name" placeholder="Full Name" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full" required/>
-                        <input type="email" name="email" placeholder="Email" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full" required/>
-                        <input type="text" name="wa_num" placeholder="Whatsapp Number" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full" required id="wa_num"/>
+                        <input type="text" name="full_name" placeholder="Full Name" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full pl-2" required/>
+                        <input type="email" name="email" placeholder="Email" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full pl-2" required/>
+                        <input type="text" name="wa_num" placeholder="Whatsapp Number" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full pl-2" required id="wa_num"/>
                         <div id="wa-msg" class="text-red-500 hidden">
                             <p>Whatsapp number must be atleast 9 characters long</p>
                         </div>
-                        <input type="text" name="lineID" placeholder="LINE ID" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full" required/>
-                        <input type="text" name="github" placeholder="Github or Gitlab ID" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full" required/>
-                        <input type="text" name="birthplace" placeholder="Birth Place" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full" required/>
+                        <input type="text" name="lineID" placeholder="LINE ID" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full pl-2" required/>
+                        <input type="text" name="github" placeholder="Github or Gitlab ID" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full pl-2" required/>
+                        <input type="text" name="birthplace" placeholder="Birth Place" class="bg-transparent rounded-md px-1 text-white border-2 border-white w-full pl-2" required/>
                         <input type="date" name="dob" placeholder="Birth Date" class="bg-transparent fill-current stroke-current rounded-md px-1 text-gray-400 border-2 border-white w-full" required/>
                         <div class="bg-transparent rounded-md px-1 text-gray-400 border-2 border-white w-full">
                         <div id="choose" class="text-gray-400">Upload ID Card</div><input type="file" id="card" name="card" accept="image/png, image/jpeg, image/jpg, image/pdf" class="idCard text-gray-400 flex justify-center mb-2"/></div>
@@ -105,7 +105,7 @@
                         <input type="file" id="cv" name="cv" accept="image/png, image/jpeg, image/jpg, image/pdf" class="mb-2 text-gray-400"/>
                         </div>
                         <div class="flex justify-center">
-                            <button type="submit" class="w-1/2 h-9 bg-blue-700 active:bg-blue-700 text-white rounded-md" value="submit">Submit</button>
+                            <button type="submit" class="w-1/2 h-9 bg-ocean active:bg-blue-700 text-white rounded-full focus:outline-none" value="submit">Submit</button>
                         </div>
                     </div>
                 </form>
